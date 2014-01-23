@@ -1,0 +1,34 @@
+//created because I cannot create a default C++ templpate to start all my programs with
+//i Proboably could but not when I am also using VS2012 for other classes
+
+#include <conio.h>
+#include <iostream>
+
+using namespace std;
+
+
+int main()
+{
+
+//	insert comments here
+//
+	
+// 1 declare variables we need
+
+
+// 2 get variables from user
+
+
+// 3 do calculations
+
+
+// 4 output results
+
+
+	cout << "output";
+
+	cout << "\nPress any key to exit";
+	_getch();
+
+	return 1;
+}
