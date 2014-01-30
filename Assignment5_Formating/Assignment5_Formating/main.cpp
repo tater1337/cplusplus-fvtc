@@ -20,7 +20,7 @@ int main()
 	int firstnum = 32;
 
 	//and a double with a value of 42.98765. 
-	float secondnum = 42.98765;
+	double secondnum = 42.98765;
 
 	// 2 get variables from user
 	//none
@@ -56,7 +56,8 @@ int main()
 	_getch();
 //Run this program first with the double as suggested. Then change the double to a 
 //float. What happens??? Include an explanation as a comment. 
-	// you get a warning about truncation of double to float. it appears that double is more precise than float and you lose data in the conversion
+	// you get a warning about truncation of double to float. 
+	// it appears that double is more precise than float and you lose/gain junk data in the conversion
 
 	return 1;
 }
