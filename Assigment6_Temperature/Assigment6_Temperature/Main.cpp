@@ -33,7 +33,8 @@ int main()
 //decimal place precision.
 
 	cout << endl;
-	cout << "the temperature of " << Celsius << " Celsius is " << convertToFahrenheit(Celsius) << " Fahrenheit";
+	cout << setprecision(2) << fixed;
+	cout << "the temperature of " << Celsius << " Celsius is " << convertToFahrenheit(Celsius) << " Fahrenheit" << endl;
 
 	cout << "\nPress any key to exit";
 	_getch();
