@@ -11,7 +11,7 @@ int main()
 	//	90378: Computer Programming C++ 90378
 	//	Tater Schuld	500139932
 	//
-//Write a C++ program that accepts a 
+	//Write a C++ program that accepts a 
 
 	//Use the following calculations:
 	//Celsius = (5.0/9.0)*(fahrenheit – 32.0)
@@ -42,6 +42,8 @@ int main()
 
 	// 3 do calculations and // 4 output results
 	//this could be done as two separate parts except for the error message
+	//Output the result with an appropriate message to 2 decimal place precision.
+	cout << setprecision(2) << fixed;
 	
 	//If the letter is f, the program is to treat the temperature as degrees fahrenheit, convert the number to the equivalent temperature in degrees celsius, 
 	//Allow both lower and upper case input.
@@ -49,7 +51,7 @@ int main()
 	//Celsius = (5.0/9.0)*(fahrenheit – 32.0)
 	{
 		outputTemp = (5.0/9.0)*(inputTemp - 32.0);
-		//outputMessage = inputTemp + C + ' is equal to ' + outputTemp + "C";
+		//outputMessage = inputTemp + "C" + " is equal to " + outputTemp << "C"; <<< need more code knowldege than taught so far
 		cout << inputTemp << C << " is equal to " << outputTemp << "C";
 	}
 	//If the letter is c, the program is to consider the number entered as a celsius temperature and convert the number to the equivalent fahrenheit temperature and 
