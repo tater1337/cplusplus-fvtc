@@ -27,11 +27,20 @@ int main()
 	
 	// 3 do calculations
 	//otherwise the person receives $8.00 for the first 40 hours plus $12.00 for each hour worked over 40 hours.
-	if (hoursWorked > 40) salary = 40 * wage + (hoursWorked - 40)* overtime;
+	if (hoursWorked > 40) 
+	{
+		salary = 40 * wage + (hoursWorked - 40)* overtime;
+	}
 	//You should not allow negative hours to be entered.
-	else if (hoursWorked < 0) salary = 0;//not sure what to put here
+	else if (hoursWorked < 0) 
+	{
+		salary = 0;//not sure what to put here
+	}
 	//If the number of hours worked is less than or equal to 40, the person receives $8.00 per hour; 
-	else salary = hoursWorked * wage;
+	else 
+	{
+		salary = hoursWorked * wage;
+	}
 
 	// 4 output results
 	//display the salary as output.
