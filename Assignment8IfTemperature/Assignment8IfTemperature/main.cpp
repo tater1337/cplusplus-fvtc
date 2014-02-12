@@ -1,6 +1,3 @@
-//created because I cannot create a default C++ templpate to start all my programs with
-//i Proboably could but not when I am also using VS2012 for other classes
-
 #include <conio.h>   //used for getchar
 #include <iostream>  //used for cin and cout
 #include <iomanip>   //used to modify text strings setprecision
@@ -27,7 +24,7 @@ int main()
 	// 1 declare variables we need
 	double inputTemp = 0;
 	double outputTemp = 0;
-	string outputScale = "Kelvin";
+	string outputMessage = "";
 	char C= 'x';
 
 	// 2 get variables from user
@@ -43,26 +40,33 @@ int main()
 	C = _getch();
 	cout << endl;
 
-	// 3 do calculations
+	// 3 do calculations and // 4 output results
+	//this could be done as two separate parts except for the error message
+	
 	//If the letter is f, the program is to treat the temperature as degrees fahrenheit, convert the number to the equivalent temperature in degrees celsius, 
 	//Allow both lower and upper case input.
-	if (C == 'F' || C == 'f')
+	if (C == 'F' || C == 'f') //input is in fahrenheit
+	//Celsius = (5.0/9.0)*(fahrenheit – 32.0)
+	{
+		outputTemp = (5.0/9.0)*(inputTemp - 32.0);
+		//outputMessage = inputTemp + C + ' is equal to ' + outputTemp + "C";
+		cout << inputTemp << C << " is equal to " << outputTemp << "C";
+	}
 	//If the letter is c, the program is to consider the number entered as a celsius temperature and convert the number to the equivalent fahrenheit temperature and 
 	//Allow both lower and upper case input.
-	else if (C == 'C' || C == 'c')
-	//If the letter is neither f nor c, the program is to print an error message and terminate.
-	else 
-
-	//Use the following calculations:
-	//Celsius = (5.0/9.0)*(fahrenheit – 32.0)
+	else if (C == 'C' || C == 'c') //input is in celsius
 	//Fahrenheit = (9.0/5.0)*celsius + 32.0
+	{
+		outputTemp = (9.0/5.0)*(inputTemp + 32.0);
+		cout << inputTemp << C << " is equal to " << outputTemp << "F";
+	}
+	//If the letter is neither f nor c, the program is to print an error message and terminate.
+	else
+	{
+			outputMessage = "temprature scale invalid";
+	}
 
-
-	// 4 output results
-
-	//print a suitable display message. 
-	
-	cout << "output" << inputTemp << " " << C;
+	cout << outputMessage << endl;
 
 	cout << "\nPress any key to exit";
 	_getch();
