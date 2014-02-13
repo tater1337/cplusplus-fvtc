@@ -10,29 +10,39 @@ using namespace std;
 
 int main()
 {
+	bool quit = false;
 
-	//	90378: Computer Programming C++ 90378
-	//	Tater Schuld	500139932
-	//
-	//	insert comments here
-	//
+//initialize variables here
+
+
+	while (quit == false)
+	{
+		//	90378: Computer Programming C++ 90378
+		//	Tater Schuld	500139932
+		//
+		//	insert comments here
+		//
 	
-	// 1 declare variables we need
+		// 1 declare variables we need
 
 
-	// 2 get variables from user
+		// 2 get variables from user
+
+		// 3 do calculations
+
+		// 4 output results
 
 
-	// 3 do calculations
+			cout << "output" << outputMessage;
 
 
-	// 4 output results
-
-
-	cout << "output";
-
-	cout << "\nPress any key to exit";
-	_getch();
-
+	
+		cout << "\nPress any key to loop or q to quit";
+		char c = _getch();
+		if (c == 'q' || c == 'Q')
+		{
+			quit = true;
+		}
+	}
 	return 1;
 }
