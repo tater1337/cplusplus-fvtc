@@ -10,4 +10,5 @@ private:
 public:
 	static bool isNumeric(string);
 	static int convertToInt(string);
+
 };
