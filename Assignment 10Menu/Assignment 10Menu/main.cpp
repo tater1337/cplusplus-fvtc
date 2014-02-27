@@ -2,7 +2,7 @@
 #include <iostream>  //used for cin and cout
 #include <iomanip>   //used to modify text strings setprecision
 #include <string>    //needed for strings
-
+#include "businessLayer.h" 
 using namespace std;
 
 int main()
@@ -55,23 +55,30 @@ int main()
 		// 1 declare variables we need
 		string number1="";
 		string number2="";
-		string oper="";
+		double num1 = 0;
+		double num2 = 0;
+		string userInput="";
+		char oper='q';
 		double output=0;
 		// 2 get variables from user
-		cout << endl << "Please ener the first number: ";
-		cin >> number1;
-
-		cout << "Please ener the second number: ";
-		cin >> number2;
-
+		//begins with a request that the user enter two numeric values. 
+		
+		do
+		{
+			cout << endl << "Please ener the first number: ";
+			cin >> number1;
+		} while (!businessLayer::isNumeric(number1));
+		num1=businessLayer::ConvertToDouble(number1);
+		do
+		{
+			cout << "Please ener the second number: ";
+			cin >> number2;
+		} while (!businessLayer::isNumeric(number2));
+		num2=businessLayer::ConvertToDouble(number2);
+		
 		//Then the program should prompt the user to choose from a menu selection of five 
 		//choices. 
 		//The menu will allow you to 
-		//add them together, 
-		//subtract the second number from the first, 
-		//multiply them together, 
-		//divide the second number into the first number, 
-		//and find the average of the two numbers. 
 		cout << endl << "operation choices" << endl;
 		cout << " + | add the two numbers together" << endl;
 		cout << " - | subtract the second number from the first, " << endl;
@@ -79,26 +86,53 @@ int main()
 		cout << " / | divide the second number into the first number, " << endl;
 		cout << " A | find the average of the two numbers." << endl;
 		cout << endl;
-		cout << "Enter a symbol on the left to performt he operation onthe right :" << endl;
-		cin >> oper;
+
+		do
+		{
+		cout << "Enter a symbol on the left to perform the operation on the right :";
+		cin >> userInput;
+		}while (userInput != "+" && userInput != "-" && userInput != "*" && userInput != "/" && userInput != "a" && userInput != "A");
+		
 		// 3 do calculations
 		
+		oper = userInput.at(0);
 		
-		//switch(oper.at(1))
-		//{
-		//case "+":
-		//cout << "add";
-		//		break;
-		//	
-		//default:
-		//	break;
-		//}
-
-
-		// 4 output results
-
-
-			//cout << "output" ;
+		switch(oper)
+		{
+			//add them together, 
+			case '+':
+				cout << "add "<< number1 <<" and "<< number2 << " together"<< endl;
+				cout << "the result is " << (num1 + num2);
+				break;
+			//subtract the second number from the first, 
+			case '-':
+				cout << "subtract "<<number2 <<" from "<<number1 << endl;
+				cout << "the result is " << (num1 - num2);
+				break;
+			//multiply them together, 
+			case '*':
+				cout << "Multiply " << number1 << " and " << number2<< endl;
+				cout << "the result is " << (num1 * num2);
+				break;
+			//divide the second number into the first number, 
+			case '/':
+				cout << "Divide " << number2 << " into " << number1<< endl;
+				cout << "the result is " << (num1 / num2);
+				break;
+			//and find the average of the two numbers. 
+			case 'a':
+				cout << "Average of " << number1 << " and " << number2<< endl;
+				cout << "the result is " << (num1 + num2)/2;
+				break;
+			//and find the average of the two numbers. 
+			case 'A': //i would have done case checking separately if there was mor ethan one place for it
+				cout << "Average of " << number1 << " and " << number2<< endl;
+				cout << "the result is " << (num1 + num2)/2;
+				break;
+		default:
+			break;
+		}
+		cout << endl;
 
 		//After the users releases control, control is then sent back request two new numbers. 
 		//Somewhere in the program, allow the user to quit the application
