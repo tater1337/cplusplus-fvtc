@@ -20,19 +20,38 @@ int main()
 		//	90378: Computer Programming C++ 90378
 		//	Tater Schuld	500139932
 		//
-		//	insert comments here
-		//
-	
+		//Write a program that generates the following pattern. Use for loops to generate the 
+		//patterns. All (*) should be printed by statements of the form cout << ‘*’; All blanks 
+		//should be printed by statements of the form cout << ‘ ‘;
+			
 		// 1 declare variables we need
 		string star= "*";
 		string space=" ";
+		// 2 no user input
+		// 3 no calculations made
 		// 4 output results
-		for (int i = 0; i < 10; i++)// four columns, ten rows
+		cout << endl;
+		cout << endl;
+		for (int i = 0; i < 10; i++) //ten rows
 		{
-			cout << "*         " << " " << "**********"<< " " << "**********" << "         *";
+			//first column (compressed For's into single lines to ease readability)
+			for (int j = 0; j < i+1; j++)		{cout << star;	} //output i+1 number of stars
+			for (int k = 0; k < 10-i-1; k++)	{cout << space;	} //pad remaining with spaces (with off by one error)
+			cout << space;
+			//second column
+			for (int j = 0; j < 10-i; j++)		{cout << star;	} //pad all - i with stars
+			for (int k = 0; k < i; k++)			{cout << space;	} //pad remaining with spaces
+			cout << space;
+			//third column
+			for (int k = 0; k < i; k++)			{cout << space;	} //output i number of spaces
+			for (int j = 0; j < 10-i; j++)		{cout << star;	} //pad remaining with stars
+			cout << space;
+			// fourth column
+			for (int k = 0; k < 10-i-1; k++)	{cout << space;	} //output all - i number of spaces (with off by one error)
+			for (int j = 0; j < i+1; j++)		{cout << star;	} //pad remaining with stars
 			cout << endl;
 		}
-
+		cout << endl;
 		cout << "\nPress any key to loop or q to quit";
 		char c = _getch();
 		if (c == 'q' || c == 'Q')
