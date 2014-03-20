@@ -192,3 +192,14 @@ int total = 0;
 	//return total
 	return total;
 }
+
+
+string businessLayer::tocurrency(double value)
+{
+	string output = "";
+	char temp[100];
+	// like tostring()  - print format to char array
+	sprintf_s(temp, "$%0.2f",value); 
+	output = temp ;
+	return output;
+}
