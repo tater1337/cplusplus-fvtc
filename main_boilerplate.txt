@@ -5,6 +5,7 @@
 #include <iostream>  //used for cin and cout
 #include <iomanip>   //used to modify text strings setprecision
 #include <string>    //needed for strings
+#include "..\..\businessLayer.h" // is numeric, string to double, string to int
 
 using namespace std;
 
