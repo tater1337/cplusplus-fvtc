@@ -12,7 +12,7 @@
 using namespace std;
 
 // initialize local functions here
-void printArray(int arr[], int r, int c);
+
 
 int main()
 {
@@ -65,9 +65,57 @@ int main()
 		//Display all three arrays as part of your output(in row/column format) , along with 
 		//appropriate messages to the end user to describe what is happening. 
 		
-		//printArray(First, kRow, kCol);
-		//printArray(Second, kRow, kCol);
-		//printArray(sum, kRow, kCol);
+		cout << "First array" << endl;
+		cout << endl;
+		for (int i = 0; i < kRow; i++)
+		{
+			cout << "Row " << i+1 << "  ";
+			for (int j = 0; j < kCol; j++)
+			{
+				cout << First[i][j];
+				if (j < kCol -1)
+				{
+					cout << " , ";
+				}
+			}
+			cout << endl;
+		}
+		cout << endl;
+
+		cout << "Second array" << endl;
+		cout << endl;
+		for (int i = 0; i < kRow; i++)
+		{
+			cout << "Row " << i+1 << "  ";
+			for (int j = 0; j < kCol; j++)
+			{
+				cout << Second[i][j];
+				if (j < kCol -1)
+				{
+					cout << " , ";
+				}
+			}
+			cout << endl;
+		}
+		cout << endl;
+		cout << "Sums of the items in the First and Second array" << endl;
+		cout << endl;
+		for (int i = 0; i < kRow; i++)
+		{
+			cout << "Row " << i+1 << "  ";
+			for (int j = 0; j < kCol; j++)
+			{
+				cout << sum[i][j];
+				if (j < kCol -1)
+				{
+					cout << " , ";
+				}
+			}
+			cout << endl;
+		}
+		cout << endl;
+
+
 		cout << endl;
 		cout << "output" << endl;
 		
@@ -81,29 +129,4 @@ int main()
 		}
 	}
 	return 1;
-}
-
-void printArray(int arr[], int r, int c)
-{
-	string output = "";
-	char temp[10] = "";
-	output += "{";
-	for (int i = 0; i < r; i++)
-		{
-			for (int j = 0; j < c; j++)
-			{
-				//cout << arr[i][j];
-				// like tostring()  - print format to char array
-				/*sprintf_s(temp, "%i",arr[i]); 
-				output += temp ;*/
-				if (i < r -1)
-				{
-					cout << ",";
-				}
-				cout << endl;
-			}
-			
-		}
-		output += "}";
-		//return output;
 }
