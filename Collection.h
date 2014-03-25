@@ -1,6 +1,6 @@
 #include <iostream>
 
-
+using namespace std;
 
 
 
@@ -25,5 +25,7 @@ public:
 	//adds a value to the end
 	void add(int value);
 
+	friend ostream& operator<<(ostream&, Collection&);
+	int operator[](int);
 
 };
