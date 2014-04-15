@@ -1,0 +1,70 @@
+student@student-virtual-machine:~$ ls
+cplusplus-fvtc                 Downloads              Pictures  Templates
+cplusplus-fvtcBackup4-15-2014  examples.desktop       project   Ubuntu One
+Desktop                        Firefox_wallpaper.png  projects  Videos
+Documents                      Music                  Public
+student@student-virtual-machine:~$ cd ~
+student@student-virtual-machine:~$ ls
+cplusplus-fvtc                 Downloads              Pictures  Templates
+cplusplus-fvtcBackup4-15-2014  examples.desktop       project   Ubuntu One
+Desktop                        Firefox_wallpaper.png  projects  Videos
+Documents                      Music                  Public
+student@student-virtual-machine:~$ cd cplusplus-fvtc
+student@student-virtual-machine:~/cplusplus-fvtc$ ls-a
+ls-a: command not found
+student@student-virtual-machine:~/cplusplus-fvtc$ ls -a
+.                             Collection.cpp
+..                            Collection.h
+03-25-2014 lecture            CPlusPlusExam3
+4-15-2014 test                CppExam2B
+Assignment 10Menu             deleteme
+assignment11ForLoops          .git
+Assignment13Change            .gitignore
+Assignment14Array             lecture03-18-14
+Assignment15Structure         lecture 03-27-2014
+Assignment7Salary             main_boilerplate.txt
+Assignment8IfTemperature      moreArays
+assignment9SwitchTemperature  Older lectures and assignments
+businessLayer.cpp             README.md
+businessLayer.h               test_prctice
+businessLayerLinux.cpp        vi-github-install.txt
+businessLayerLinux.h
+student@student-virtual-machine:~/cplusplus-fvtc$ git add .
+student@student-virtual-machine:~/cplusplus-fvtc$ git comit -m "created new helper class for linux env"
+git: 'comit' is not a git command. See 'git --help'.
+
+Did you mean this?
+	commit
+student@student-virtual-machine:~/cplusplus-fvtc$ git commit -m "created new helper class for linux env"
+[master dc0e448] created new helper class for linux env
+ 12 files changed, 883 insertions(+)
+ create mode 100644 4-15-2014 test/4-15-2014 test.cbp
+ create mode 100644 4-15-2014 test/4-15-2014 test.depend
+ create mode 100644 4-15-2014 test/4-15-2014 test.layout
+ create mode 100644 4-15-2014 test/CollectionLinux.cpp
+ create mode 100644 4-15-2014 test/CollectionLinux.h
+ create mode 100755 4-15-2014 test/bin/Debug/4-15-2014 test
+ create mode 100644 4-15-2014 test/businessLayerLinux.cpp
+ create mode 100644 4-15-2014 test/businessLayerLinux.h
+ create mode 100644 4-15-2014 test/main.cpp
+ create mode 100644 businessLayerLinux.cpp
+ create mode 100644 businessLayerLinux.h
+ create mode 100644 vi-github-install.txt
+student@student-virtual-machine:~/cplusplus-fvtc$ get push origin master
+No command 'get' found, but there are 17 similar ones
+get: command not found
+student@student-virtual-machine:~/cplusplus-fvtc$ git push origin master
+Username for 'https://github.com': tater1337
+Password for 'https://tater1337@github.com': 
+fatal: Authentication failed
+student@student-virtual-machine:~/cplusplus-fvtc$ git push origin master
+Username for 'https://github.com': tater1337
+Password for 'https://tater1337@github.com': 
+Counting objects: 17, done.
+Compressing objects: 100% (14/14), done.
+Writing objects: 100% (16/16), 26.56 KiB, done.
+Total 16 (delta 2), reused 0 (delta 0)
+To https://github.com/tater1337/cplusplus-fvtc.git
+   8e4c755..dc0e448  master -> master
+student@student-virtual-machine:~/cplusplus-fvtc$ 
+
