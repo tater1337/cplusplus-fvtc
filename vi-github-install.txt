@@ -1,0 +1,129 @@
+hine:~$ sudo apt-get install git
+[sudo] password for student: 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following extra packages will be installed:
+  git-man liberror-perl
+Suggested packages:
+  git-daemon-run git-daemon-sysvinit git-doc git-el git-arch git-cvs git-svn
+  git-email git-gui gitk gitweb
+The following NEW packages will be installed:
+  git git-man liberror-perl
+0 upgraded, 3 newly installed, 0 to remove and 0 not upgraded.
+Need to get 6,703 kB of archives.
+After this operation, 15.4 MB of additional disk space will be used.
+Do you want to continue [Y/n]? y
+Get:1 http://us.archive.ubuntu.com/ubuntu/ quantal/main liberror-perl all 0.17-1 [23.8 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu/ quantal/main git-man all 1:1.7.10.4-1ubuntu1 [634 kB]
+Get:3 http://us.archive.ubuntu.com/ubuntu/ quantal/main git i386 1:1.7.10.4-1ubuntu1 [6,045 kB]
+Fetched 6,703 kB in 3s (1,958 kB/s)
+Selecting previously unselected package liberror-perl.
+(Reading database ... 152839 files and directories currently installed.)
+Unpacking liberror-perl (from .../liberror-perl_0.17-1_all.deb) ...
+Selecting previously unselected package git-man.
+Unpacking git-man (from .../git-man_1%3a1.7.10.4-1ubuntu1_all.deb) ...
+Selecting previously unselected package git.
+Unpacking git (from .../git_1%3a1.7.10.4-1ubuntu1_i386.deb) ...
+Processing triggers for man-db ...
+Setting up liberror-perl (0.17-1) ...
+Setting up git-man (1:1.7.10.4-1ubuntu1) ...
+Setting up git (1:1.7.10.4-1ubuntu1) ...
+student@student-virtual-machine:~$ git
+usage: git [--version] [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p|--paginate|--no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [-c name=value] [--help]
+           <command> [<args>]
+
+The most commonly used git commands are:
+   add        Add file contents to the index
+   bisect     Find by binary search the change that introduced a bug
+   branch     List, create, or delete branches
+   checkout   Checkout a branch or paths to the working tree
+   clone      Clone a repository into a new directory
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   fetch      Download objects and refs from another repository
+   grep       Print lines matching a pattern
+   init       Create an empty git repository or reinitialize an existing one
+   log        Show commit logs
+   merge      Join two or more development histories together
+   mv         Move or rename a file, a directory, or a symlink
+   pull       Fetch from and merge with another repository or a local branch
+   push       Update remote refs along with associated objects
+   rebase     Forward-port local commits to the updated upstream head
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+   show       Show various types of objects
+   status     Show the working tree status
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+See 'git help <command>' for more information on a specific command.
+student@student-virtual-machine:~$ git config --global user.name "Tater the  1337" 
+student@student-virtual-machine:~$ git config -- global user.email "tater.schuld@outlook.com"
+error: key does not contain a section: global
+student@student-virtual-machine:~$ git config --global user.email "tater.schuld@outlook.com"
+student@student-virtual-machine:~$ ls
+Desktop    Downloads         Music     project   Public     Ubuntu One
+Documents  examples.desktop  Pictures  projects  Templates  Videos
+student@student-virtual-machine:~$ git clone https://github.com/tater1337/cplusplus-fvtc.git
+Cloning into 'cplusplus-fvtc'...
+remote: Reusing existing pack: 539, done.
+remote: Counting objects: 30, done.
+remote: Compressing objects: 100% (30/30), done.
+remote: Total 569 (delta 9), reused 0 (delta 0)
+Receiving objects: 100% (569/569), 5.64 MiB | 2.94 MiB/s, done.
+Resolving deltas: 100% (282/282), done.
+student@student-virtual-machine:~$ ls
+cplusplus-fvtc  Downloads         Pictures  Public      Videos
+Desktop         examples.desktop  project   Templates
+Documents       Music             projects  Ubuntu One
+student@student-virtual-machine:~$ cd cplusplus-fvtc
+student@student-virtual-machine:~/cplusplus-fvtc$ ls
+03-25-2014 lecture            Collection.h
+Assignment 10Menu             CPlusPlusExam3
+assignment11ForLoops          CppExam2B
+Assignment13Change            deleteme
+Assignment14Array             lecture03-18-14
+Assignment15Structure         lecture 03-27-2014
+Assignment7Salary             main_boilerplate.txt
+Assignment8IfTemperature      moreArays
+assignment9SwitchTemperature  Older lectures and assignments
+businessLayer.cpp             README.md
+businessLayer.h               test_prctice
+Collection.cpp
+student@student-virtual-machine:~/cplusplus-fvtc$ 
+student@student-virtual-machine:~/cplusplus-fvtc$ ls
+03-25-2014 lecture            Collection.h
+Assignment 10Menu             CPlusPlusExam3
+assignment11ForLoops          CppExam2B
+Assignment13Change            deleteme
+Assignment14Array             lecture03-18-14
+Assignment15Structure         lecture 03-27-2014
+Assignment7Salary             main_boilerplate.txt
+Assignment8IfTemperature      moreArays
+assignment9SwitchTemperature  Older lectures and assignments
+businessLayer.cpp             README.md
+businessLayer.h               test_prctice
+Collection.cpp
+student@student-virtual-machine:~/cplusplus-fvtc$ ls
+
+B
+B
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+

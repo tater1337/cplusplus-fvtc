@@ -1,0 +1,29 @@
+# depslib dependency file v1.0
+1397578162 source:/home/student/cplusplus-fvtc/4-15-2014 test/main.cpp
+	<stdio.h>
+	<iostream>
+	<iomanip>
+	<string>
+	<math.h>
+	"businessLayerLinux.h"
+
+1397577750 /home/student/cplusplus-fvtc/4-15-2014 test/businessLayerLinux.h
+	<string>
+
+1397578675 source:/home/student/cplusplus-fvtc/businessLayerLinux.cpp
+	"businessLayer.h"
+	<math.h>
+	<stdio.h>
+
+1396974288 /home/student/cplusplus-fvtc/businessLayer.h
+	<string>
+
+1397577750 source:/home/student/cplusplus-fvtc/4-15-2014 test/businessLayerLinux.cpp
+	"businessLayer.h"
+
+1397579051 source:/home/student/cplusplus-fvtc/4-15-2014 test/CollectionLinux.cpp
+	"CollectionLinux.h"
+
+1397579659 /home/student/cplusplus-fvtc/4-15-2014 test/CollectionLinux.h
+	<iostream>
+
