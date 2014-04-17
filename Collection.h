@@ -22,8 +22,8 @@ public:
 	//adds a value to the end
 	void add(T value);
 	T& operator[](int);
-	friend ostream& operator<<(ostream&, Collection<T>&);
-	
+	//friend ostream& operator<<(ostream&, Collection<T>&);
+
 
 };
 
@@ -36,7 +36,7 @@ template <class T>
 		//create new array of lengh _length
 		_data = new T[_length];
 		//initialize the array
-		
+
 	}
 	// destructor
 template <class T>
@@ -52,12 +52,12 @@ template <class T>
 		return _length;
 	}
 	// returns a value in the index
-	template <class T>
-	T Collection<T>::GetValue(int index)
-	{
-		// add check to see if index past length
-		return T[index];
-	}
+//	template <class T>
+//	T Collection<T>::GetValue(int index)
+//	{
+//		// add check to see if index past length
+//		return T[index];
+//	}
 	//adds a value to the end
 template <class T>
 	void Collection<T>::add(T value)//int value)
