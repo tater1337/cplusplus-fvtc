@@ -1,0 +1,27 @@
+# depslib dependency file v1.0
+1397754012 source:/home/student/cplusplus-fvtc/Superhero/main.cpp
+	<iostream>
+	"../businessLayer.h"
+	"../Collection.h"
+	"SuperHero.h"
+
+1396974288 source:/home/student/cplusplus-fvtc/Collection.cpp
+	"Collection.h"
+
+1397749368 /home/student/cplusplus-fvtc/Collection.h
+	<iostream>
+
+1397578675 source:/home/student/cplusplus-fvtc/businessLayerLinux.cpp
+	"businessLayer.h"
+	<math.h>
+	<stdio.h>
+
+1396974288 /home/student/cplusplus-fvtc/businessLayer.h
+	<string>
+
+1397753873 source:/home/student/cplusplus-fvtc/Superhero/SuperHero.cpp
+	"SuperHero.h"
+
+1397752439 /home/student/cplusplus-fvtc/Superhero/SuperHero.h
+	<iostream>
+
